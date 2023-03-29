@@ -1,0 +1,56 @@
+/*VARIABLE DECLARATION --> variables decalred in root so can be applied across whole HTML file*/
+:root {
+    --search-button-text: black;
+    --sub-heading-text-colour: black;
+
+/*COLOUR PALLETE --> tester*/
+    --charcoal: #313e50ff;
+    --delft-blue: #3a435eff;
+    --charcoal-2: #455561ff;
+    --paynes-gray: #5c6672ff;
+    --slate-gray: #6c6f7fff;
+}
+
+/*ELEMENT STYLING*/
+body {
+    background-color: var(--slate-gray);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+button {
+    color: var(--search-button-text);
+}
+
+/*CLASS STYLING*/
+.sub-heading {
+    color: var(--sub-heading-text-colour);
+}
+
+.list-title {
+    font-size: large;
+}
+
+.input-field {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;  
+    margin: 10px; 
+}
+
+/*ID STYLING*/
+#title {
+    display: flex;
+    align-items: center;
+}
+
+
+

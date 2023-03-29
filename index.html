@@ -7,18 +7,35 @@
     <title>Financial Data API</title>
     <link rel= "stylesheet" type= "text/css" href= "styles.css">
 </head>
-<h1 class="h1" id="title">Financial Data API</h1>
-<input type="search" class="input-field" id="ticker" placeholder="enter a ticker" size="10">
-<button id="enter">Enter</button>
-<h2>Query Available Data</h2>
-<input type="search" class="input-field" id="company" placeholder="enter a ticker" size="10">
-<input type="search" class="input-field" id="year" placeholder="enter a year" size="10">
-<button id="earnings_search">Enter</button>
-<ul id="earnings_call_list"></ul>
-<p class="sub-heading">Earnings Call Highlights</p>
-<input type="search" class="input-field" id="q" placeholder="enter a q" size="10">
-<button id="find-highlights">Find Quarter Highlights</button>
-<ul class="list-title" id="earnings_highlights">Earnings Comments</ul>
-<script src="main.js" ></script> 
+<body>
+    <h1 class="h1" id="title">Stock Screener</h1>
+    <div id="stock-finder">
+        <h2>Stock Finder</h2>
+        <p>Use the search bar below to find details on any company using their ticker. e.g. for Apple use AAPL.</p>
+        <input type="search" class="input-field" id="ticker" placeholder="enter a ticker" size="10">
+        <button id="enter">Enter</button>
+        <h3>Summary:</h3>
+        <p id="summary">test</p>
+        <h3>Statistics:</h3>
+        <p id="statistics">test</p>
+    </div>
+    <div id="earnings-calls">
+        <div id="earnings-call-finder">
+            <h2>Find Available Earnings Call Data</h2>
+            <p>Using the search bars below find out what earnings call data is available for a given stock in a given year.<br>For example, if you wanted to find what quarters earnings calls were available for Apple in 2021, you would enter "AAPL" and "2021".</p>
+            <input type="search" class="input-field" id="company" placeholder="enter a ticker" size="10">
+            <input type="search" class="input-field" id="year" placeholder="enter a year" size="10">
+            <button id="earnings_search">Enter</button>
+            <ul id="earnings_call_list"></ul>
+        </div id="earnings-call-highlights">
+            <h2>Get Earnings Call Highlights</h2>
+            <p>To access the highlights from any of the avilable earnings calls shown above, simply enter the relevant quarter number in the box below like so "q1"</p>
+            <input type="search" class="input-field" id="q" placeholder="enter a q" size="10">
+            <button id="find-highlights">Find Call Highlights</button>
+            <h3>Earnings Call Highlights:</h3>
+            <ul class="list-title" id="earnings_highlights"></ul>
+        <div>
+    </div>
+    <script src="main.js" ></script> 
 </body>
 </html>

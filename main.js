@@ -8,17 +8,40 @@ let earnings_search = document.querySelector('#earnings_search');
 let earnings_call_list = document.querySelector('#earnings_call_list');
 let find_highlights = document.querySelector('#find-highlights');
 let earningsHighlights = document.querySelector('#earnings_highlights');
-
+let summaryP = document.querySelector('#summary');
+let statisticsP = document.querySelector('#statistics');
+console.log(summaryP);
+console.log(statistics);
 
 //FUNCTIONS
+
+
+
 //fetch stock data
 async function getData (){
+    //send GET request
     const response = await fetch (`https://api.aletheiaapi.com/StockData?symbol=${tickerInput.value}&summary=true&statistics=true`, {
         headers: { accept: "application/json" , key: "1903B8CC247449C89B54205C3940C453"}});
     //convert json to JS object --> store in data
     const data = await response.json();
-    //print to check
-    console.log(data);
+    //Output contents of data to screen under Summary and Statistics Headings
+      //SUMMARY
+        //declare empty string variable to store Summary Object
+        let sumOutput = "";
+        //iterate through summary object and add key:value pair to sumOutput Variable
+        for (let key in data.Summary){
+            sumOutput += `${key}: ${data.Summary[key]}<br>`;    //br added to return new line
+        }
+        //change content under summary heading to sumOutput (innerHTML as <br> wont read if change textcontent)
+        summaryP.innerHTML = sumOutput;                         
+      //STATISTICS
+        //same as summary
+        let statOutput = "";
+        for (let key in data.Statistics){
+            statOutput += `${key}: ${data.Statistics[key]}<br>`;
+        }
+        statisticsP.innerHTML = statOutput;
+    
 }
 
 //fetch earnings call data

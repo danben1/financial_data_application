@@ -2,25 +2,20 @@
 :root {
     --search-button-text: black;
     --sub-heading-text-colour: black;
-
-/*COLOUR PALLETE --> tester*/
-    --charcoal: #313e50ff;
-    --delft-blue: #3a435eff;
-    --charcoal-2: #455561ff;
-    --paynes-gray: #5c6672ff;
-    --slate-gray: #6c6f7fff;
 }
 
 /*ELEMENT STYLING*/
 body {
-    background-color: var(--slate-gray);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
+    background-color: white;
+
 }
 
 button {
     color: var(--search-button-text);
+}
+
+h2, h3 {
+    text-decoration-line: underline;
 }
 
 /*CLASS STYLING*/
@@ -32,28 +27,66 @@ button {
     font-size: large;
 }
 
+.button {
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+}
+
 .input-field {
-    width: 300px;
+    width: 200px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 12px;
     background-color: white;
     background-image: url('https://www.w3schools.com/css/searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;  
+    padding: 10px 10px 10px 40px;  
     margin: 10px; 
+}
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.nav-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 500px;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 /*ID STYLING*/
 #title {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
 #earnings-calls {
-    background-color: lightgray;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
 }
+
+#stock-finder {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
 
 
